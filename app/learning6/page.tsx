@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef } from 'react';
+import Reveal from './Reveal';
 
 const Learning6 = () => {
     const canvasRef = useRef<any>(null);
@@ -93,14 +94,20 @@ const Learning6 = () => {
     };
 
     return (
-        <div
-            className='flex items-center justify-center'
-            style={{ background: '#000', color: 'white', height: '500vh', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
-            <h1 ref={headingRef}
-                className='text-[8rem]  w-full fixed left-[25%] font-bold top-[10%]'
-            >Airpods Pro</h1>
-            <canvas ref={canvasRef} style={{ position: 'fixed', left: '50%', top: '50%', maxHeight: '100vh', maxWidth: '100vw', transform: 'translate(-50%, -50%)' }} />
-        </div>
+        <>
+            <div
+                className='flex items-center justify-center'
+                style={{ background: '#000', color: 'white', height: '500vh', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
+                <h1 ref={headingRef}
+                    className='text-[8rem]  w-full fixed left-[25%] font-bold top-[10%]'
+                >Airpods Pro</h1>
+                <canvas ref={canvasRef} style={{ position: 'fixed', left: '50%', top: '50%', maxHeight: '100vh', maxWidth: '100vw', transform: 'translate(-50%, -50%)' }} />
+
+
+
+            </div>
+            {/* <Reveal /> i*/}
+        </>
     );
 };
 
